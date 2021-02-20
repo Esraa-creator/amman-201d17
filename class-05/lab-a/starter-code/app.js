@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-let result = a+b;
-let statement = `The sum of ${a} and ${b} is ${result}.`
-return [result,statement];
+  let result = a+b;
+  let statement = `The sum of ${a} and ${b} is ${result}.`
+  return [result,statement];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -52,11 +52,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sum1=sum(a,b);
+  let sum2=sum1[0];   
+  let sum3=sum(sum2,c);
+  let sum4=sum3[0];
 
+
+  let m1=multiply(a,b);
+  let m2=m1[0];   
+  let m3=multiply(m2,c);
+  let m4=m3[0];
+
+  let message1=`${a} and ${b} and ${c} sum to ${sum4}.`;
+  let message2=`The product of ${a} and ${b} and ${c} is ${m4}.`;
+
+  return [sum4,m4,message1,message2]
 }
 
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
